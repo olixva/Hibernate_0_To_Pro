@@ -7,11 +7,10 @@ import org.junit.jupiter.api.Test;
 
 import com.hibernate.model.Employee;
 
-
 public class HibernateTest {
 
     private static Session sesion;
-    
+
     @BeforeAll
     public static void setUp() {
         sesion = HibernateUtil.getSessionFactory().openSession();
@@ -66,6 +65,5 @@ public class HibernateTest {
     public static void tearDown() {
         HibernateUtil.shutdown();
     }
-    
-    
+
 }
