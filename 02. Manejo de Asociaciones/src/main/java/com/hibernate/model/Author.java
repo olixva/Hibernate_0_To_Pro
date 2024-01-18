@@ -3,6 +3,8 @@ package com.hibernate.model;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class Author {
@@ -23,6 +25,9 @@ public class Author {
     @OneToOne
     @JoinColumn(name = "address_id", unique = true)
     private Address address;
+
+    @OneToMany(mappedBy = "author")
+    private Set<Book> books = new HashSet<>();
 
     public Author(String name, String email, LocalDate birthDate) {
         this.name = name;
@@ -82,5 +87,13 @@ public class Author {
 
     public void setAddress(Address address) {
         this.address = address;
+    }
+
+    public Set<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(Set<Book> books) {
+        this.books = books;
     }
 }
