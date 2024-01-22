@@ -16,5 +16,8 @@
         <property name="hibernate.use_sql_comments">true</property>
         <property name="hibernate.hbm2ddl.auto">create</property>
         <mapping class="com.hibernate.model.Author"/>
+        <mapping class="com.hibernate.model.Book"/>
+        <mapping class="com.hibernate.model.Category"/>
+        <mapping class="com.hibernate.model.Adress"/>
     </session-factory>
 </hibernate-configuration>
