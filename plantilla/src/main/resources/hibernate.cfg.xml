@@ -18,6 +18,6 @@
         <mapping class="com.hibernate.model.Author"/>
         <mapping class="com.hibernate.model.Book"/>
         <mapping class="com.hibernate.model.Category"/>
-        <mapping class="com.hibernate.model.Adress"/>
+        <mapping class="com.hibernate.model.Address"/>
     </session-factory>
 </hibernate-configuration>
