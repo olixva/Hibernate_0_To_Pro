@@ -123,18 +123,18 @@ En Hibernate 6 aparecen dos nuevas interfaces:
 
 4 implicit naming strategies for database sequences:
 
-```xml
+'''xml
 <property name="hibernate.id.db_structure_naming_strategy" value="standard" />
 <property name="hibernate.id.db_structure_naming_strategy" value="legacy" />
 <property name="hibernate.id.db_structure_naming_strategy" value="single" />
 <property name="hibernate.id.db_structure_naming_strategy" value="com.example.MyCustomStrategy" />
-```
+'''
 
 La última opción requiere crear una nueva estrategia:
 
-```java
+'''java
  MyCustomStrategy implements ImplicitDatabaseObjectNamingStrategy
-```
+'''
 
 
 ## Orden en listas
@@ -149,9 +149,9 @@ Hibernate 6 proporciona 2 formas de modificar este comportamiento:
 
 * @OrderColumn
 
-```xml
+'''xml
 <property name="hibernate.mapping.default_list_semantics" value="LIST" />
-```
+'''
 
 
 ## Select en JPQL
@@ -161,7 +161,7 @@ Se recomienda usar select en todas las consultas JPQL, dado que en hibernate 6 c
 
 Ejemplo:
 
-```java
+'''java
 List<Object[]> results = em.createQuery("FROM Company c JOIN c.employees e").getResultList();
 
 // query que se genera en Hibernate 5: 
@@ -173,26 +173,26 @@ SELECT c FROM Company c JOIN c.employees
 // Por tanto es mejor especificar SELECT:
 
 List<Object[]> results = em.createQuery("SELECT c, e FROM Company c JOIN c.employees e").getResultList();
-```
+'''
 
 ## Auto-desduplicado
 
 En Hibernate 5, cuando se hacía un join fetch de asociaciones de tipo many era necesario especificar `distinct` en el select a fin de evitar que se duplicara la entidad padre, ejemplo:
 
 
-```java
+'''java
       select distinct c from Company c
       join fetch c.computers
       where c.id = :id
-```
+'''
 
 Hibernate 6 ya lo hace automáticamente, por lo que no se necesita usar `distinct`:
 
-```java
+'''java
       select c from Company c
       join fetch c.computers
       where c.id = :id
-```
+'''
 
 ## @Incubating
 
