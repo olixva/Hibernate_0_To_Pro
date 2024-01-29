@@ -44,9 +44,7 @@ public class JpaTest {
         CriteriaQuery<Author> query = cb.createQuery(Author.class);
         Root<Author> root = query.from(Author.class);
         query.select(root);
+
         em.createQuery(query).getResultList().forEach(System.out::println);
-
     }
-
-
 }
