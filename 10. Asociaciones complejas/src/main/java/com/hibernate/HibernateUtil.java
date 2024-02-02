@@ -18,13 +18,14 @@ public class HibernateUtil {
 
                 // Create MetadataSources
                 MetadataSources sources = new MetadataSources(registry);
-                // sources.addAnnotatedClass(Employee.class);
+//                sources.addAnnotatedClass(Employee.class);
 
                 // Create Metadata
                 Metadata metadata = sources.getMetadataBuilder().build();
 
                 // Create SessionFactory
                 sessionFactory = metadata.getSessionFactoryBuilder().build();
+
 
             } catch (Exception e) {
                 e.printStackTrace();
