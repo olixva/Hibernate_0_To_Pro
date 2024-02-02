@@ -1,9 +1,6 @@
 package com.hibernate.model.maps;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Book {
@@ -14,6 +11,7 @@ public class Book {
 
     private String title;
 
+    @Column(unique = true)
     private String isbn;
 
     private Double price;
