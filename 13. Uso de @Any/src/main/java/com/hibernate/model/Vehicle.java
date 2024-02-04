@@ -27,6 +27,12 @@ public class Vehicle implements Item<Vehicle> {
         this.price = price;
     }
 
+    public Vehicle(String manufacturer, String model, Double price) {
+        this.manufacturer = manufacturer;
+        this.model = model;
+        this.price = price;
+    }
+
     @Override
     public Vehicle getValue() {
         return new Vehicle(this.id, this.manufacturer, this.model, this.price);
@@ -34,7 +40,7 @@ public class Vehicle implements Item<Vehicle> {
 
     @Override
     public String getName() {
-        return this.model;
+        return this.manufacturer + " " + this.model;
     }
 
     public long getId() {

@@ -25,6 +25,11 @@ public class House implements Item<House> {
         this.price = price;
     }
 
+    public House(String location, Double price) {
+        this.location = location;
+        this.price = price;
+    }
+
     @Override
     public House getValue() {
         return new House(this.id, this.location, this.price);
