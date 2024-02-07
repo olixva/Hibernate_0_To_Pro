@@ -14,6 +14,14 @@ public class Address {
     private String street;
     private String city;
     private String country;
+    private String state;
+
+    public Address(String street, String city, String country, String state) {
+        this.street = street;
+        this.city = city;
+        this.country = country;
+        this.state = state;
+    }
 
     public Address(String street, String city, String country) {
         this.street = street;
@@ -22,16 +30,6 @@ public class Address {
     }
 
     public Address() {
-    }
-
-    @Override
-    public String toString() {
-        return "Address{" +
-                "id=" + id +
-                ", street='" + street + '\'' +
-                ", city='" + city + '\'' +
-                ", country='" + country + '\'' +
-                '}';
     }
 
     public long getId() {
@@ -62,7 +60,26 @@ public class Address {
         return country;
     }
 
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "id=" + id +
+                ", street='" + street + '\'' +
+                ", city='" + city + '\'' +
+                ", country='" + country + '\'' +
+                ", state='" + state + '\'' +
+                '}';
     }
 }
