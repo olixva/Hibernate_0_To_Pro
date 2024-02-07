@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.hibernate</groupId>
-    <artifactId>plantilla</artifactId>
+    <artifactId>uso-naturalid</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -36,6 +36,14 @@
             <artifactId>junit-jupiter</artifactId>
             <version>5.10.1</version>
             <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+            <scope>provided</scope>
         </dependency>
 
     </dependencies>
