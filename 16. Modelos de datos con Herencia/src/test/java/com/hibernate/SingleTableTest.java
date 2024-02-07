@@ -22,8 +22,8 @@ public class SingleTableTest {
         insertDemoData();
         Session session = HibernateUtil.getSessionFactory().openSession();
 
-        var basics = session.createQuery("from BasicAccount", BasicAccount.class).list();
-        basics.forEach(System.out::println);
+//        var basics = session.createQuery("from BasicAccount", BasicAccount.class).list();
+//        basics.forEach(System.out::println);
 
 //        var premiums = session.createQuery("from PremiumAccount", PremiumAccount.class).list();
 //        premiums.forEach(System.out::println);
@@ -31,8 +31,7 @@ public class SingleTableTest {
 //        var accs = session.createQuery("from Account", Account.class).list();
 //        accs.forEach(System.out::println);
 
-//        session.find(AccountOwner.class, 1L).getAccounts().forEach(System.out::println);
-
+        session.find(AccountOwner.class, 1L).getAccounts().forEach(System.out::println);
 
     }
 
