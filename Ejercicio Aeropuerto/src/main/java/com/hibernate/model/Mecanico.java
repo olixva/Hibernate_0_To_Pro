@@ -6,9 +6,9 @@ import jakarta.persistence.Entity;
 public class Mecanico extends Persona {
 
     private String salario;
-    private String turno;
+    private float turno;
 
-    public Mecanico(String nss, String nombre, String direccion, String salario, String turno) {
+    public Mecanico(String nss, String nombre, String direccion, String salario, float turno) {
         super(nss, nombre, direccion);
         this.salario = salario;
         this.turno = turno;
@@ -25,11 +25,11 @@ public class Mecanico extends Persona {
         this.salario = salario;
     }
 
-    public String getTurno() {
+    public float getTurno() {
         return turno;
     }
 
-    public void setTurno(String turno) {
+    public void setTurno(float turno) {
         this.turno = turno;
     }
 

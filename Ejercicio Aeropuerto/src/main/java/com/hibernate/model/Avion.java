@@ -11,7 +11,7 @@ import java.util.Date;
 public class Avion {
 
     @Id
-    @Column(name = "N_registro")
+    @Column(name = "n_registro")
     private int NRegistro;
 
     @NaturalId

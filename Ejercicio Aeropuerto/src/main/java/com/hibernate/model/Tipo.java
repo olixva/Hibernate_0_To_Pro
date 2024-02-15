@@ -11,7 +11,7 @@ public class Tipo {
 
     private int capacidad;
 
-    private int peso;
+    private float peso;
 
     public Tipo(String modelo, int capacidad, int peso) {
         this.modelo = modelo;
@@ -38,11 +38,11 @@ public class Tipo {
         this.capacidad = capacidad;
     }
 
-    public int getPeso() {
+    public float getPeso() {
         return peso;
     }
 
-    public void setPeso(int peso) {
+    public void setPeso(float peso) {
         this.peso = peso;
     }
 

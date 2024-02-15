@@ -22,6 +22,7 @@
         <mapping class="com.hibernate.model.Piloto"/>
         <mapping class="com.hibernate.model.Propietario"/>
         <mapping class="com.hibernate.model.Tipo"/>
+        <mapping class="com.hibernate.model.Hangar"/>
 
     </session-factory>
 </hibernate-configuration>
