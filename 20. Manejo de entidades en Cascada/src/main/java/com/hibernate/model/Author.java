@@ -2,7 +2,6 @@ package com.hibernate.model;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -11,49 +10,37 @@ public class Author {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
-    @Column(length = 50, nullable = false)
     private String name;
 
-    @Column(unique = true)
-    private String email;
+    private Integer age;
 
-    @Column(name = "birth_date")
-    private LocalDate birthDate;
-
-    @OneToOne
-    @JoinColumn(name = "address_id", unique = true)
+    @OneToOne(cascade = CascadeType.ALL)
+//    @OneToOne
     private Address address;
 
-    @OneToMany(mappedBy = "author")
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+//    @OneToMany(mappedBy = "author")
+    @JoinTable(name = "author_book",
+            joinColumns = @JoinColumn(name = "author_id"),
+            inverseJoinColumns = @JoinColumn(name = "book_id"))
     private Set<Book> books = new HashSet<>();
-
-    public Author(String name, String email, LocalDate birthDate) {
-        this.name = name;
-        this.email = email;
-        this.birthDate = birthDate;
-    }
 
     public Author() {
     }
 
-    @Override
-    public String toString() {
-        return "Author{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", birthDate=" + birthDate +
-                ", address=" + address +
-                '}';
+    public Author(String name, Integer age, Address address) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -65,20 +52,12 @@ public class Author {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
+    public Integer getAge() {
+        return age;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public LocalDate getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(LocalDate birthDate) {
-        this.birthDate = birthDate;
+    public void setAge(Integer age) {
+        this.age = age;
     }
 
     public Address getAddress() {
@@ -95,5 +74,15 @@ public class Author {
 
     public void setBooks(Set<Book> books) {
         this.books = books;
+    }
+
+    @Override
+    public String toString() {
+        return "Author{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", address=" + address +
+                '}';
     }
 }
