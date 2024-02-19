@@ -25,14 +25,14 @@
 <!--        <mapping class="com.hibernate.tableperclass.Vehicle"/>-->
 <!--        <mapping class="com.hibernate.tableperclass.Owner"/>-->
 
-<!--        <mapping class="com.hibernate.joined.Computer"/>-->
-<!--        <mapping class="com.hibernate.joined.Phone"/>-->
-<!--        <mapping class="com.hibernate.joined.Device"/>-->
-<!--        <mapping class="com.hibernate.joined.DeviceOwner"/>-->
+        <mapping class="com.hibernate.joined.Computer"/>
+        <mapping class="com.hibernate.joined.Phone"/>
+        <mapping class="com.hibernate.joined.Device"/>
+        <mapping class="com.hibernate.joined.DeviceOwner"/>
 
-        <mapping class="com.hibernate.singletable.Account" />
-        <mapping class="com.hibernate.singletable.BasicAccount" />
-        <mapping class="com.hibernate.singletable.PremiumAccount" />
-        <mapping class="com.hibernate.singletable.AccountOwner" />
+<!--        <mapping class="com.hibernate.singletable.Account" />-->
+<!--        <mapping class="com.hibernate.singletable.BasicAccount" />-->
+<!--        <mapping class="com.hibernate.singletable.PremiumAccount" />-->
+<!--        <mapping class="com.hibernate.singletable.AccountOwner" />-->
     </session-factory>
 </hibernate-configuration>

@@ -3,6 +3,7 @@ package com.hibernate.model;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "personas")
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Persona {
 

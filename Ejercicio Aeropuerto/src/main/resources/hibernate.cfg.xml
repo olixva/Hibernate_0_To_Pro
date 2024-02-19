@@ -6,7 +6,7 @@
             com.mysql.cj.jdbc.Driver
         </property>
         <property name="hibernate.connection.url">
-            jdbc:mysql://localhost:3306/hibernate_curso1?createDatabaseIfNotExist=true
+            jdbc:mysql://localhost:3306/aviones?createDatabaseIfNotExist=true
         </property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">root</property>
@@ -23,6 +23,10 @@
         <mapping class="com.hibernate.model.Propietario"/>
         <mapping class="com.hibernate.model.Tipo"/>
         <mapping class="com.hibernate.model.Hangar"/>
+        <mapping class="com.hibernate.model.Compra"/>
+        <mapping class="com.hibernate.model.Mantiene"/>
+
+
 
     </session-factory>
 </hibernate-configuration>

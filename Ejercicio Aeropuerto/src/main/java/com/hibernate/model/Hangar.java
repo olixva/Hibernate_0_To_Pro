@@ -1,15 +1,21 @@
 package com.hibernate.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
+@Table(name = "hangares")
 public class Hangar {
 
     @Id
     @Column(name = "cod_hangar")
     private String codHangar;
+
+    @OneToMany(mappedBy = "hangar")
+    private Set<Avion> aviones = new HashSet<>();
+
 
     private int capacidad;
 
