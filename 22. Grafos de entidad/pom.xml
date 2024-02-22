@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.hibernate</groupId>
-    <artifactId>plantilla</artifactId>
+    <artifactId>grafos-entidad</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
