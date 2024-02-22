@@ -49,12 +49,13 @@ public class ExamenTest {
             session.persist(hangar);
         }
 
-        Set<Hangar> hangares = new HashSet<>(session.createQuery("from Hangar", Hangar.class).list());
+        Set<Hangar> hangares = new HashSet<>(session.createQuery("from Hangar", Hangar.class).getResultList());
+        Set<Tipo> tipos = new HashSet<>(session.createQuery("from Tipo", Tipo.class).getResultList());
 
         // Aviones
         for (int i = 0; i < 10; i++) {
-            //var avion = new Avion(faker.number().numberBetween(1, 10), faker.letterify("???-####"), faker.date().birthday(1, 5), faker.date().birthday(2, 10), hangares.)
-            //session.persist(avion);
+//            var avion = new Avion(faker.number().numberBetween(1, 10), faker.letterify("???-####"), faker.date().birthday(1, 5), faker.date().birthday(2, 10), hangares.)
+//            session.persist(avion);
         }
 
 
