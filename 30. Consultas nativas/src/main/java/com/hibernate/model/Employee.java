@@ -1,4 +1,4 @@
 package com.hibernate.model;
 
-public class Address {
+public class Employee {
 }
