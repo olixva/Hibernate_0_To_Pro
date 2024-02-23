@@ -2,64 +2,34 @@ package com.hibernate.model;
 
 import jakarta.persistence.*;
 
-import java.util.HashSet;
-import java.util.Set;
-
 @Entity
 public class Book {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     private String title;
 
-    private Double price;
-
-    @Column(name = "number_pages")
-    private Integer numberOfPages;
-
-    private boolean published;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "author_id")
+    @ManyToOne
     private Author author;
 
-    @ManyToMany
-    @JoinTable(
-            name = "book_category",
-            joinColumns = @JoinColumn(name = "book_id", referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(name = "category_id", referencedColumnName = "id")
-    )
-    private Set<Category> categories = new HashSet<>();
+    private String category;
 
     public Book() {
     }
 
-    public Book(String title, Double price, Integer numberOfPages, boolean published, Author author) {
+    public Book(String title, Author author, String category) {
         this.title = title;
-        this.price = price;
-        this.numberOfPages = numberOfPages;
-        this.published = published;
         this.author = author;
+        this.category = category;
     }
 
-    @Override
-    public String toString() {
-        return "Book{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", price=" + price +
-                ", numberOfPages=" + numberOfPages +
-                ", published=" + published +
-                '}';
-    }
-
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -71,30 +41,6 @@ public class Book {
         this.title = title;
     }
 
-    public Double getPrice() {
-        return price;
-    }
-
-    public void setPrice(Double price) {
-        this.price = price;
-    }
-
-    public Integer getNumberOfPages() {
-        return numberOfPages;
-    }
-
-    public void setNumberOfPages(Integer numberOfPages) {
-        this.numberOfPages = numberOfPages;
-    }
-
-    public boolean isPublished() {
-        return published;
-    }
-
-    public void setPublished(boolean published) {
-        this.published = published;
-    }
-
     public Author getAuthor() {
         return author;
     }
@@ -103,11 +49,20 @@ public class Book {
         this.author = author;
     }
 
-    public Set<Category> getCategories() {
-        return categories;
+    public String getCategory() {
+        return category;
     }
 
-    public void setCategories(Set<Category> categories) {
-        this.categories = categories;
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", category='" + category + '\'' +
+                '}';
     }
 }
