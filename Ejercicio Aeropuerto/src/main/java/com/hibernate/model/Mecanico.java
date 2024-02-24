@@ -1,5 +1,6 @@
 package com.hibernate.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
@@ -11,19 +12,22 @@ import java.util.Set;
 @Table(name = "mecanicos")
 public class Mecanico extends Persona {
 
+    @Column(name = "salario")
     private Double salario;
+
+    @Column(name = "turno")
     private String turno;
 
     @ManyToMany(mappedBy = "mecanicos")
     private Set<Avion> aviones = new HashSet<>();
 
+    public Mecanico() {
+    }
+
     public Mecanico(String nss, String nombre, String direccion, Double salario, String turno) {
         super(nss, nombre, direccion);
         this.salario = salario;
         this.turno = turno;
-    }
-
-    public Mecanico() {
     }
 
     public Double getSalario() {
@@ -42,18 +46,10 @@ public class Mecanico extends Persona {
         this.turno = turno;
     }
 
-    public Set<Avion> getAviones() {
-        return aviones;
-    }
-
-    public void setAviones(Set<Avion> aviones) {
-        this.aviones = aviones;
-    }
-
     @Override
     public String toString() {
         return "Mecanico{" +
-                "salario='" + salario + '\'' +
+                "salario=" + salario +
                 ", turno='" + turno + '\'' +
                 '}';
     }

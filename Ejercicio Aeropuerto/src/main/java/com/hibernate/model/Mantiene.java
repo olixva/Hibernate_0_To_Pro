@@ -11,24 +11,23 @@ public class Mantiene {
 
     @Id
     @Column(name = "avion_n_registro", insertable = false, updatable = false)
-    private int avionNRegistro;
+    private String avionNRegistro;
 
     @Id
     @Column(name = "mecanico_nss", insertable = false, updatable = false)
-    private int mecanicoNss;
+    private String mecanicoNss;
 
     @Id
-    @Column(name = "cod_trabajo", insertable = false, updatable = false)
     private String codTrabajo;
 
     private LocalDate fecha;
-    @Column(name = "n_horas")
+
     private Integer nHoras;
 
     public Mantiene() {
     }
 
-    public Mantiene(int avionNRegistro, int mecanicoNss, String codTrabajo, LocalDate fecha, Integer nHoras) {
+    public Mantiene(String avionNRegistro, String mecanicoNss, String codTrabajo, LocalDate fecha, Integer nHoras) {
         this.avionNRegistro = avionNRegistro;
         this.mecanicoNss = mecanicoNss;
         this.codTrabajo = codTrabajo;
@@ -36,15 +35,19 @@ public class Mantiene {
         this.nHoras = nHoras;
     }
 
-    public void setAvionNRegistro(int avionNRegistro) {
+    public String getAvionNRegistro() {
+        return avionNRegistro;
+    }
+
+    public void setAvionNRegistro(String avionNRegistro) {
         this.avionNRegistro = avionNRegistro;
     }
 
-    public int getMecanicoNss() {
+    public String getMecanicoNss() {
         return mecanicoNss;
     }
 
-    public void setMecanicoNss(int mecanicoNss) {
+    public void setMecanicoNss(String mecanicoNss) {
         this.mecanicoNss = mecanicoNss;
     }
 
@@ -72,15 +75,11 @@ public class Mantiene {
         this.nHoras = nHoras;
     }
 
-    public int getAvionNRegistro() {
-        return avionNRegistro;
-    }
-
     @Override
     public String toString() {
         return "Mantiene{" +
-                "avionNRegistro=" + avionNRegistro +
-                ", mecanicoNss=" + mecanicoNss +
+                "avionNRegistro='" + avionNRegistro + '\'' +
+                ", mecanicoNss='" + mecanicoNss + '\'' +
                 ", codTrabajo='" + codTrabajo + '\'' +
                 ", fecha=" + fecha +
                 ", nHoras=" + nHoras +

@@ -11,37 +11,36 @@ public class Compra {
 
     @Id
     @Column(name = "avion_n_registro", insertable = false, updatable = false)
-    private int avionNRegistro;
+    private String avionNRegistro;
 
     @Id
     @Column(name = "propietario_nss", insertable = false, updatable = false)
-    private int propietarioNss;
+    private String propietarioNss;
 
-    @Column(name = "fecha_compra")
     private LocalDate fechaCompra;
 
     public Compra() {
     }
 
-    public Compra(int avionNRegistro, int propietarioNss, LocalDate fechaCompra) {
-        this.avionNRegistro = avionNRegistro;
-        this.propietarioNss = propietarioNss;
+    public Compra(Avion avion, Propietario propietario, LocalDate fechaCompra) {
+        this.avionNRegistro = avion.getnRegistro();
+        this.propietarioNss = propietario.getNss();
         this.fechaCompra = fechaCompra;
     }
 
-    public int getAvionNRegistro() {
+    public String getAvionNRegistro() {
         return avionNRegistro;
     }
 
-    public void setAvionNRegistro(int avionNRegistro) {
+    public void setAvionNRegistro(String avionNRegistro) {
         this.avionNRegistro = avionNRegistro;
     }
 
-    public int getPropietarioNss() {
+    public String getPropietarioNss() {
         return propietarioNss;
     }
 
-    public void setPropietarioNss(int propietarioNss) {
+    public void setPropietarioNss(String propietarioNss) {
         this.propietarioNss = propietarioNss;
     }
 
@@ -56,8 +55,8 @@ public class Compra {
     @Override
     public String toString() {
         return "Compra{" +
-                "avionNRegistro=" + avionNRegistro +
-                ", propietarioNss=" + propietarioNss +
+                "avionNRegistro='" + avionNRegistro + '\'' +
+                ", propietarioNss='" + propietarioNss + '\'' +
                 ", fechaCompra=" + fechaCompra +
                 '}';
     }

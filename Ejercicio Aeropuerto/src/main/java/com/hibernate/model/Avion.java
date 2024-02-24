@@ -13,13 +13,14 @@ public class Avion {
 
     @Id
     @Column(name = "n_registro")
-    private int nRegistro;
+    private String nRegistro;
 
     @NaturalId
-    private String matriucla;
+    @Column(name = "matricula")
+    private String matricula;
 
     @Column(name = "fecha_reg")
-    private LocalDate fechaRegistro;
+    private LocalDate fechaReg;
 
     @Column(name = "fecha_construccion")
     private LocalDate fechaConstruccion;
@@ -48,32 +49,40 @@ public class Avion {
     )
     private Set<Propietario> propietarios = new HashSet<>();
 
-    public Avion(int nRegistro, String matriucla, LocalDate fechaRegistro, LocalDate fechaConstruccion, Hangar hangar, Tipo tipo) {
+    public Avion() {
+    }
+
+    public Avion(String nRegistro, String matricula, LocalDate fechaReg, LocalDate fechaConstruccion, Hangar hangar, Tipo tipo) {
         this.nRegistro = nRegistro;
-        this.matriucla = matriucla;
-        this.fechaRegistro = fechaRegistro;
+        this.matricula = matricula;
+        this.fechaReg = fechaReg;
         this.fechaConstruccion = fechaConstruccion;
         this.hangar = hangar;
         this.tipo = tipo;
     }
 
-    public Avion() {
+    public String getnRegistro() {
+        return nRegistro;
     }
 
-    public String getMatriucla() {
-        return matriucla;
+    public void setnRegistro(String nRegistro) {
+        this.nRegistro = nRegistro;
     }
 
-    public void setMatriucla(String matriucla) {
-        this.matriucla = matriucla;
+    public String getMatricula() {
+        return matricula;
     }
 
-    public LocalDate getFechaRegistro() {
-        return fechaRegistro;
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
     }
 
-    public void setFechaRegistro(LocalDate fechaRegistro) {
-        this.fechaRegistro = fechaRegistro;
+    public LocalDate getFechaReg() {
+        return fechaReg;
+    }
+
+    public void setFechaReg(LocalDate fechaReg) {
+        this.fechaReg = fechaReg;
     }
 
     public LocalDate getFechaConstruccion() {
@@ -100,37 +109,15 @@ public class Avion {
         this.tipo = tipo;
     }
 
-    public int getnRegistro() {
-        return nRegistro;
-    }
-
-    public void setnRegistro(int nRegistro) {
-        this.nRegistro = nRegistro;
-    }
-
-    public Set<Mecanico> getMecanicos() {
-        return mecanicos;
-    }
-
-    public void setMecanicos(Set<Mecanico> mecanicos) {
-        this.mecanicos = mecanicos;
-    }
-
-    public Set<Propietario> getPropietarios() {
-        return propietarios;
-    }
-
-    public void setPropietarios(Set<Propietario> propietarios) {
-        this.propietarios = propietarios;
-    }
-
     @Override
     public String toString() {
         return "Avion{" +
-                "NRegistro=" + nRegistro +
-                ", matriucla='" + matriucla + '\'' +
-                ", fechaRegistro=" + fechaRegistro +
+                "nRegistro='" + nRegistro + '\'' +
+                ", matricula='" + matricula + '\'' +
+                ", fechaReg=" + fechaReg +
                 ", fechaConstruccion=" + fechaConstruccion +
+                ", hangar=" + hangar +
+                ", tipo=" + tipo +
                 '}';
     }
 }

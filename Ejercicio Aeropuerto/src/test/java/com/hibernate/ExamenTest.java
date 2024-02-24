@@ -3,68 +3,147 @@ package com.hibernate;
 import com.github.javafaker.Faker;
 import com.hibernate.model.*;
 import org.hibernate.Session;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import java.util.HashSet;
-import java.util.Set;
-import java.util.stream.Collectors;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.*;
 
 public class ExamenTest {
 
     private static Faker faker = new Faker();
 
-    @BeforeAll
-    public static void insertData() {
+    @Test
+    void insertDataTest() {
+        insertData();
+    }
+
+    private void insertData() {
+
         Session session = HibernateUtil.getSessionFactory().openSession();
+
         session.beginTransaction();
 
-        // Mecanicos
-        for (int i = 0; i < 10; i++) {
-            var mecanico = new Mecanico(faker.number().digits(12), faker.name().fullName(), faker.address().fullAddress(), faker.number().randomDouble(2, 1000, 2000), "Manana");
-            session.persist(mecanico);
-        }
+        String tipoTurnos[] = {"Mañana", "Tarde", "Noche"};
 
-        // Propietarios
-        for (int i = 0; i < 10; i++) {
-            var propietario = new Propietario(faker.number().digits(12), faker.name().fullName(), faker.address().fullAddress(), faker.phoneNumber().cellPhone());
-            session.persist(propietario);
-        }
+        Random random = new Random();
 
-        // Pilotos
+        // Insertar 10 tipos
         for (int i = 0; i < 10; i++) {
-            var piloto = new Piloto(faker.number().digits(12), faker.name().fullName(), faker.address().fullAddress(), faker.number().digits(8));
-            session.persist(piloto);
-        }
-
-        // Tipos
-        for (int i = 0; i < 10; i++) {
-            var tipo = new Tipo(faker.name().name(), faker.number().numberBetween(100, 200), faker.number().numberBetween(10000, 20000));
+            Tipo tipo = new Tipo(
+                    faker.letterify("????"),
+                    faker.number().numberBetween(100, 300),
+                    faker.number().randomDouble(2,10000, 50000)
+            );
             session.persist(tipo);
         }
 
-        // Hangares
+        List<Tipo> tipos = session.createQuery("select t from Tipo t", Tipo.class).getResultList();
+
+        // Insertar 10 mecánicos
         for (int i = 0; i < 10; i++) {
-            var hangar = new Hangar(faker.number().digits(4), faker.number().numberBetween(10, 20), faker.address().city());
+            Mecanico mecanico = new Mecanico(
+                    faker.number().digits(12),
+                    faker.name().fullName(),
+                    faker.address().fullAddress(),
+                    faker.number().randomDouble(2,1000, 2000),
+                    tipoTurnos[random.nextInt(tipoTurnos.length)]
+            );
+            session.persist(mecanico);
+        }
+
+        List<Mecanico> mecanicos = session.createQuery("select m from Mecanico m", Mecanico.class).getResultList();
+
+        // Insertar 10 propietarios
+        for (int i = 0; i < 10; i++) {
+            Propietario propietario = new Propietario(
+                    faker.number().digits(12),
+                    faker.name().fullName(),
+                    faker.address().fullAddress(),
+                    faker.phoneNumber().cellPhone()
+            );
+            session.persist(propietario);
+        }
+
+        List<Propietario> propietarios = session.createQuery("select p from Propietario p", Propietario.class).getResultList();
+
+        // Insertar 10 pilotos
+        for (int i = 0; i < 10; i++) {
+            Piloto piloto = new Piloto(
+                    faker.number().digits(12),
+                    faker.name().fullName(),
+                    faker.address().fullAddress(),
+                    faker.number().digits(8)
+            );
+
+            for (int j = 0; j < faker.random().nextInt(1,4); j++) {
+                piloto.getTipos().add(tipos.get(random.nextInt(tipos.size())));
+            }
+
+            session.persist(piloto);
+        }
+
+        List<Piloto> pilotos = session.createQuery("select p from Piloto p", Piloto.class).getResultList();
+
+        // Insertar 10 hangares
+        for (int i = 0; i < 10; i++) {
+            Hangar hangar = new Hangar(
+                    faker.letterify("????"),
+                    faker.number().numberBetween(0, 10),
+                    faker.address().cityName()
+            );
             session.persist(hangar);
         }
 
-        Set<Hangar> hangares = new HashSet<>(session.createQuery("from Hangar", Hangar.class).getResultList());
-        Set<Tipo> tipos = new HashSet<>(session.createQuery("from Tipo", Tipo.class).getResultList());
+        List<Hangar> hangares = session.createQuery("select h from Hangar h", Hangar.class).getResultList();
 
-        // Aviones
-        for (int i = 0; i < 10; i++) {
-//            var avion = new Avion(faker.number().numberBetween(1, 10), faker.letterify("???-####"), faker.date().birthday(1, 5), faker.date().birthday(2, 10), hangares.)
-//            session.persist(avion);
+        // Insertar 100 aviones
+        for (int i = 0; i < 100; i++) {
+            Avion avion = new Avion(
+                    faker.number().digits(6),
+                    faker.letterify("???")+faker.numerify("###"),
+                    convertToLocalDate(faker.date().birthday(1, 5)),
+                    convertToLocalDate(faker.date().birthday(2, 10)),
+                    hangares.get(random.nextInt(hangares.size())),
+                    tipos.get(random.nextInt(tipos.size()))
+            );
+            session.persist(avion);
         }
 
+        List<Avion> aviones = session.createQuery("select a from Avion a", Avion.class).getResultList();
+
+        //Insertar 100 mantenimientos
+        for (int i = 0; i < 100; i++) {
+            Mantiene mantiene = new Mantiene(
+                    aviones.get(random.nextInt(aviones.size())).getnRegistro(),
+                    mecanicos.get(random.nextInt(mecanicos.size())).getNss(),
+                    faker.letterify("??")+faker.numerify("##"),
+                    convertToLocalDate(faker.date().birthday(0, 2)),
+                    faker.number().numberBetween(1, 10)
+            );
+
+            session.persist(mantiene);
+        }
+
+        //Insertar 100 compras
+        aviones.forEach(avion -> {
+            Compra compra = new Compra(
+                    avion,
+                    propietarios.get(random.nextInt(propietarios.size())),
+                    convertToLocalDate(faker.date().birthday(0, 20))
+            );
+            session.persist(compra);
+        });
 
         session.getTransaction().commit();
 
     }
 
-    @Test
-    public void test() {
-        System.out.println("Test");
+    private LocalDate convertToLocalDate(java.util.Date dateToConvert) {
+        return dateToConvert.toInstant()
+                .atZone(ZoneId.of("Europe/Madrid"))
+                .toLocalDate();
     }
+
+
 }

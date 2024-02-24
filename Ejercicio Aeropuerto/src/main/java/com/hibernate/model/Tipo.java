@@ -10,26 +10,28 @@ import java.util.Set;
 public class Tipo {
 
     @Id
+    @Column(name = "modelo")
     private String modelo;
 
-    private int capacidad;
+    @Column(name = "capacidad")
+    private Integer capacidad;
 
-    private float peso;
+    @Column(name = "peso")
+    private Double peso;
 
     @OneToMany(mappedBy = "tipo")
-    private Set<Avion> aviones = new HashSet<>();
+    private Set<Avion> aviones;
 
-    @ManyToMany
-    @JoinTable(name = "pilota", joinColumns = @JoinColumn(name = "tipo_modelo"), inverseJoinColumns = @JoinColumn(name = "piloto_nss"))
+    @ManyToMany(mappedBy = "tipos")
     private Set<Piloto> pilotos = new HashSet<>();
 
-    public Tipo(String modelo, int capacidad, int peso) {
+    public Tipo() {
+    }
+
+    public Tipo(String modelo, Integer capacidad, Double peso) {
         this.modelo = modelo;
         this.capacidad = capacidad;
         this.peso = peso;
-    }
-
-    public Tipo() {
     }
 
     public String getModelo() {
@@ -40,40 +42,28 @@ public class Tipo {
         this.modelo = modelo;
     }
 
-    public int getCapacidad() {
+    public Integer getCapacidad() {
         return capacidad;
     }
 
-    public void setCapacidad(int capacidad) {
+    public void setCapacidad(Integer capacidad) {
         this.capacidad = capacidad;
     }
 
-    public float getPeso() {
+    public Double getPeso() {
         return peso;
     }
 
-    public void setPeso(float peso) {
+    public void setPeso(Double peso) {
         this.peso = peso;
-    }
-
-    public Set<Avion> getAviones() {
-        return aviones;
-    }
-
-    public void setAviones(Set<Avion> aviones) {
-        this.aviones = aviones;
-    }
-
-    public Set<Piloto> getPilotos() {
-        return pilotos;
-    }
-
-    public void setPilotos(Set<Piloto> pilotos) {
-        this.pilotos = pilotos;
     }
 
     @Override
     public String toString() {
-        return "Tipo{" + "modelo='" + modelo + '\'' + ", capacidad=" + capacidad + ", peso=" + peso + '}';
+        return "Tipo{" +
+                "modelo='" + modelo + '\'' +
+                ", capacidad=" + capacidad +
+                ", peso=" + peso +
+                '}';
     }
 }

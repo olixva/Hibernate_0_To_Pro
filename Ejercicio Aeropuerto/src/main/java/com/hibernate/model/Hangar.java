@@ -13,21 +13,22 @@ public class Hangar {
     @Column(name = "cod_hangar")
     private String codHangar;
 
+    @Column(name = "capacidad")
+    private Integer capacidad;
+
+    @Column(name = "localizacion")
+    private String localizacion;
+
     @OneToMany(mappedBy = "hangar")
     private Set<Avion> aviones = new HashSet<>();
 
+    public Hangar() {
+    }
 
-    private int capacidad;
-
-    private String localizacion;
-
-    public Hangar(String codHangar, int capacidad, String localizacion) {
+    public Hangar(String codHangar, Integer capacidad, String localizacion) {
         this.codHangar = codHangar;
         this.capacidad = capacidad;
         this.localizacion = localizacion;
-    }
-
-    public Hangar() {
     }
 
     public String getCodHangar() {
@@ -38,11 +39,11 @@ public class Hangar {
         this.codHangar = codHangar;
     }
 
-    public int getCapacidad() {
+    public Integer getCapacidad() {
         return capacidad;
     }
 
-    public void setCapacidad(int capacidad) {
+    public void setCapacidad(Integer capacidad) {
         this.capacidad = capacidad;
     }
 
@@ -52,6 +53,14 @@ public class Hangar {
 
     public void setLocalizacion(String localizacion) {
         this.localizacion = localizacion;
+    }
+
+    public Set<Avion> getAviones() {
+        return aviones;
+    }
+
+    public void setAviones(Set<Avion> aviones) {
+        this.aviones = aviones;
     }
 
     @Override
