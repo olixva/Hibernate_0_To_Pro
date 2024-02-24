@@ -9,13 +9,19 @@ import org.junit.jupiter.api.Test;
 import com.github.javafaker.Faker;
 import com.hibernate.HibernateUtil;
 
-public class insertDataTest {
+public class InsertDataTest {
 
     private static Faker faker = new Faker();
 
     @Test
     void test() {
         insertData();
+
+        var session = HibernateUtil.getSessionFactory().openSession();
+
+        session.createQuery("from Tarea", Tarea.class)
+                .list()
+                .forEach(tecnico -> System.out.println(tecnico.getTecnicos()));
     }
 
     void insertData() {
@@ -95,8 +101,7 @@ public class insertDataTest {
         for (int i = 0; i < 100; i++) {
             Trabaja trabaja = new Trabaja(
                 tecnicos.get(faker.number().numberBetween(0, tecnicos.size())),
-                inciencias.get(faker.number().numberBetween(0, inciencias.size())),
-                tareas.get(faker.number().numberBetween(0, tareas.size())).getNumOrden(),
+                tareas.get(faker.number().numberBetween(0, tareas.size())),
                 roles.get(faker.number().numberBetween(0, roles.size())),
                 convertToLocalDate(faker.date().birthday(0, 10)),
                 faker.lorem().sentence()

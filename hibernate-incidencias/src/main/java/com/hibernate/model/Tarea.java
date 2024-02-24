@@ -9,7 +9,6 @@ import jakarta.persistence.*;
 @Table(name = "tarea")
 public class Tarea {
 
-    @Id
     @ManyToOne
     @JoinColumn(name = "cod_incidencia")
     private Incidencia codIncidencia;
@@ -25,9 +24,8 @@ public class Tarea {
     @ManyToMany
     @JoinTable(name = "trabaja", 
         joinColumns = {
-            @JoinColumn(name = "cod_incidencia"),
             @JoinColumn(name = "num_orden")
-        }, 
+        },
         inverseJoinColumns = @JoinColumn(name = "cod_tecnico"))
     private Set<Tecnico> tecnicos = new HashSet<>();
 

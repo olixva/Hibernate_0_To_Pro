@@ -1,6 +1,8 @@
 package com.hibernate.model;
 
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 import jakarta.persistence.*;
 
@@ -13,6 +15,9 @@ public class Tecnico extends Usuario {
 
     @Column(name = "especialidad", nullable = true)
     private String especialidad;
+
+    @ManyToMany(mappedBy = "tecnicos")
+    private Set<Tarea> tareas = new HashSet<>();
 
     public Tecnico() {
     }
@@ -45,6 +50,14 @@ public class Tecnico extends Usuario {
 
     public void setFechaAlta(LocalDate fechaAlta) {
         this.fechaAlta = fechaAlta;
+    }
+
+    public Set<Tarea> getTareas() {
+        return tareas;
+    }
+
+    public void setTareas(Set<Tarea> tareas) {
+        this.tareas = tareas;
     }
 
     @Override

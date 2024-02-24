@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a56cef8f-27d8-4848-9491-ad5f6c89e1f4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hibernate/model/Incidencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hibernate/model/Incidencia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hibernate/model/Responsable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hibernate/model/Responsable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hibernate/model/Rol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hibernate/model/Rol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hibernate/model/Tarea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hibernate/model/Tarea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hibernate/model/Tecnico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hibernate/model/Tecnico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hibernate/model/Trabaja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hibernate/model/Trabaja.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hibernate/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hibernate/model/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/hibernate/model/insertDataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/hibernate/model/InsertDataTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hibernate/HibernateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hibernate/HibernateUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hibernate/model/Incidencia.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hibernate/model/Incidencia.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hibernate/model/Responsable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hibernate/model/Responsable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hibernate/model/Rol.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hibernate/model/Rol.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hibernate/model/Tarea.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hibernate/model/Tarea.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hibernate/model/Tecnico.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hibernate/model/Tecnico.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hibernate/model/Trabaja.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hibernate/model/Trabaja.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hibernate/model/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hibernate/model/Usuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/hibernate/model/insertDataTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/hibernate/model/insertDataTest.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2cpXFyHqmtNA6lZ5SktCCXp3PHU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.InsertDataTest.executor": "Run",
+    "JUnit.InsertDataTest.test.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/DAM/Proyectos VSC/Java/Hibernate/hibernate-incidencias",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="InsertDataTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hibernate-incidencias" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hibernate.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hibernate.model" />
+      <option name="MAIN_CLASS_NAME" value="com.hibernate.model.InsertDataTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.InsertDataTest.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-temurin-21.0.1-f644763e9732-a3c558b9" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a56cef8f-27d8-4848-9491-ad5f6c89e1f4" name="Changes" comment="" />
+      <created>1708809395474</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708809395474</updated>
+      <workItem from="1708809397586" duration="2941000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

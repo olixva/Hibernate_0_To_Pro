@@ -8,21 +8,20 @@ import jakarta.persistence.*;
 @Table(name = "trabaja")
 public class Trabaja {
 
+    // Tecnico
     @Id
     @Column(name = "cod_tecnico")
     private String codTecnico;
 
-    @Id
-    @Column(name = "cod_incidencia")
-    private String codIncidencia;
-
-    @ManyToOne
-    @JoinColumn(name = "cod_rol")
-    private Rol codRol;
-
+    // Tarea
     @Id
     @Column(name = "num_orden")
     private Integer numOrden;
+
+    // Rol
+    @ManyToOne
+    @JoinColumn(name = "cod_rol")
+    private Rol codRol;
 
     @Column(name = "fecha")
     private LocalDate fecha;
@@ -33,11 +32,10 @@ public class Trabaja {
     public Trabaja() {
     }
 
-    public Trabaja(Tecnico tecnico, Incidencia incidencia, Integer numOrden, Rol codRol, 
+    public Trabaja(Tecnico tecnico, Tarea tarea, Rol codRol,
             LocalDate fecha, String trabajoRealizado) {
         this.codTecnico = tecnico.getCodUsuario();
-        this.codIncidencia = incidencia.getCodIncidencia();
-        this.numOrden = numOrden;
+        this.numOrden = tarea.getNumOrden();
         this.codRol = codRol;
         this.fecha = fecha;
         this.trabajoRealizado = trabajoRealizado;
@@ -49,14 +47,6 @@ public class Trabaja {
 
     public void setCodTecnico(String codTecnico) {
         this.codTecnico = codTecnico;
-    }
-
-    public String getCodIncidencia() {
-        return codIncidencia;
-    }
-
-    public void setCodIncidencia(String codIncidencia) {
-        this.codIncidencia = codIncidencia;
     }
 
     public Rol getCodRol() {
@@ -85,7 +75,7 @@ public class Trabaja {
 
     @Override
     public String toString() {
-        return "Trabaja [codRol=" + codRol + ", codTarea=" + codIncidencia + ", codTecnico=" + codTecnico + ", fecha=" + fecha
+        return "Trabaja [codTecnico=" + codTecnico + ", codRol=" + codRol + ", fecha=" + fecha + ", numOrden=" + numOrden
                 + ", trabajoRealizado=" + trabajoRealizado + "]";
     }
     
