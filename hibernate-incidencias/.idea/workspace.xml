@@ -4,26 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a56cef8f-27d8-4848-9491-ad5f6c89e1f4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hibernate/model/Incidencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hibernate/model/Incidencia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hibernate/model/Responsable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hibernate/model/Responsable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hibernate/model/Rol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hibernate/model/Rol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hibernate/model/Tarea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hibernate/model/Tarea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hibernate/model/Tecnico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hibernate/model/Tecnico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hibernate/model/Trabaja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hibernate/model/Trabaja.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hibernate/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hibernate/model/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/hibernate/model/insertDataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/hibernate/model/InsertDataTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hibernate/HibernateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hibernate/HibernateUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hibernate/model/Incidencia.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hibernate/model/Incidencia.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hibernate/model/Responsable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hibernate/model/Responsable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hibernate/model/Rol.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hibernate/model/Rol.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hibernate/model/Tarea.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hibernate/model/Tarea.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hibernate/model/Tecnico.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hibernate/model/Tecnico.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hibernate/model/Trabaja.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hibernate/model/Trabaja.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hibernate/model/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hibernate/model/Usuario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/hibernate/model/insertDataTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/hibernate/model/insertDataTest.class" afterDir="false" />
+    <list default="true" id="a56cef8f-27d8-4848-9491-ad5f6c89e1f4" name="Changes" comment="Funcionando con 3 ID en Trabaja">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,10 +15,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2cpXFyHqmtNA6lZ5SktCCXp3PHU" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -50,7 +32,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/DAM/Proyectos VSC/Java/Hibernate/hibernate-incidencias",
+    "last_opened_file_path": "C:/DAM/Proyectos VSC/Java/Hibernate/Ejercicio Aeropuerto",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -98,6 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1708809395474</updated>
       <workItem from="1708809397586" duration="2941000" />
+      <workItem from="1708855893174" duration="10000" />
     </task>
     <servers />
   </component>
