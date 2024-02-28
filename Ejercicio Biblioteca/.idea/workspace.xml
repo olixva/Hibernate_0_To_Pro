@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="57e632eb-89d5-478b-a007-22bfad290b41" name="Changes" comment="Inserccion de datos terminada">
+      <change afterPath="$PROJECT_DIR$/../Incidencias/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Incidencias/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Incidencias/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Incidencias/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Incidencias/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Incidencias/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Incidencias/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Incidencias/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Incidencias/src/main/java/com/hibernate/HibernateUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Incidencias/src/main/java/com/hibernate/model/Incidencia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Incidencias/src/main/java/com/hibernate/model/Responsable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Incidencias/src/main/java/com/hibernate/model/Rol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Incidencias/src/main/java/com/hibernate/model/Tarea.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Incidencias/src/main/java/com/hibernate/model/Tecnico.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Incidencias/src/main/java/com/hibernate/model/Trabaja.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Incidencias/src/main/java/com/hibernate/model/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Incidencias/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Incidencias/src/test/java/com/hibernate/model/InsertDataTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Incidencias/target/classes/com/hibernate/HibernateUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Incidencias/target/classes/com/hibernate/model/Incidencia.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Incidencias/target/classes/com/hibernate/model/Responsable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Incidencias/target/classes/com/hibernate/model/Rol.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Incidencias/target/classes/com/hibernate/model/Tarea.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Incidencias/target/classes/com/hibernate/model/Tecnico.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Incidencias/target/classes/com/hibernate/model/Trabaja.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Incidencias/target/classes/com/hibernate/model/Usuario.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Incidencias/target/classes/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Incidencias/target/test-classes/com/hibernate/model/InsertDataTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hibernate-asociaciones/hibernate-asociaciones/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hibernate-asociaciones/hibernate-asociaciones/src/main/java/com/hibernate/HibernateUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hibernate-asociaciones/hibernate-asociaciones/src/main/java/com/hibernate/model/Apoya.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hibernate-asociaciones/hibernate-asociaciones/src/main/java/com/hibernate/model/Asalariado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hibernate-asociaciones/hibernate-asociaciones/src/main/java/com/hibernate/model/Asociacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hibernate-asociaciones/hibernate-asociaciones/src/main/java/com/hibernate/model/Objetivo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hibernate-asociaciones/hibernate-asociaciones/src/main/java/com/hibernate/model/Participa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hibernate-asociaciones/hibernate-asociaciones/src/main/java/com/hibernate/model/Persona.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hibernate-asociaciones/hibernate-asociaciones/src/main/java/com/hibernate/model/Proyecto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hibernate-asociaciones/hibernate-asociaciones/src/main/java/com/hibernate/model/Rol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hibernate-asociaciones/hibernate-asociaciones/src/main/java/com/hibernate/model/Socio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hibernate-asociaciones/hibernate-asociaciones/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hibernate-asociaciones/hibernate-asociaciones/src/test/java/com/hibernate/insertDataTestAsociaciones.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hibernate-asociaciones/hibernate-asociaciones/target/classes/com/hibernate/HibernateUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hibernate-asociaciones/hibernate-asociaciones/target/classes/com/hibernate/model/Apoya.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hibernate-asociaciones/hibernate-asociaciones/target/classes/com/hibernate/model/Asalariado.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hibernate-asociaciones/hibernate-asociaciones/target/classes/com/hibernate/model/Asociacion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hibernate-asociaciones/hibernate-asociaciones/target/classes/com/hibernate/model/Objetivo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hibernate-asociaciones/hibernate-asociaciones/target/classes/com/hibernate/model/Participa.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hibernate-asociaciones/hibernate-asociaciones/target/classes/com/hibernate/model/Persona.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hibernate-asociaciones/hibernate-asociaciones/target/classes/com/hibernate/model/Proyecto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hibernate-asociaciones/hibernate-asociaciones/target/classes/com/hibernate/model/Rol.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hibernate-asociaciones/hibernate-asociaciones/target/classes/com/hibernate/model/Socio.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hibernate-asociaciones/hibernate-asociaciones/target/classes/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hibernate-asociaciones/hibernate-asociaciones/target/test-classes/com/hibernate/insertDataTestAsociaciones.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c4da206b-d816-4684-b08b-9ec89f35caef.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c4da206b-d816-4684-b08b-9ec89f35caef/storage_v2/_src_/schema/hibernate-Biblioteca.QfdADg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c4da206b-d816-4684-b08b-9ec89f35caef/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c4da206b-d816-4684-b08b-9ec89f35caef/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c4da206b-d816-4684-b08b-9ec89f35caef/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c4da206b-d816-4684-b08b-9ec89f35caef/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ingeniero/model/Articulo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ingeniero/model/Articulo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ingeniero/model/Autor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ingeniero/model/Autor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ingeniero/model/Obra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ingeniero/model/Obra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ingeniero/model/Socio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ingeniero/model/Socio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias/src/main/java/com/hibernate/HibernateUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias/src/main/java/com/hibernate/model/Incidencia.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias/src/main/java/com/hibernate/model/Responsable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias/src/main/java/com/hibernate/model/Rol.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias/src/main/java/com/hibernate/model/Tarea.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias/src/main/java/com/hibernate/model/Tecnico.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias/src/main/java/com/hibernate/model/Trabaja.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias/src/main/java/com/hibernate/model/Usuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias/src/main/resources/hibernate.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias/src/test/java/com/hibernate/model/InsertDataTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias/target/classes/com/hibernate/HibernateUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias/target/classes/com/hibernate/model/Incidencia.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias/target/classes/com/hibernate/model/Responsable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias/target/classes/com/hibernate/model/Rol.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias/target/classes/com/hibernate/model/Tarea.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias/target/classes/com/hibernate/model/Tecnico.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias/target/classes/com/hibernate/model/Trabaja.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias/target/classes/com/hibernate/model/Usuario.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias/target/classes/hibernate.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-incidencias/target/test-classes/com/hibernate/model/insertDataTest.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2cp2n72ihLCnd5Y9o6B7BTWKMrF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.Test1.CrearBBDD.executor": "Run",
+    "JUnit.Test1.consulta.executor": "Run",
+    "JUnit.Test1.consultas.executor": "Run",
+    "JUnit.Test1.executor": "Run",
+    "JUnit.Test1.inserAll (1).executor": "Run",
+    "JUnit.Test1.inserAll.executor": "Run",
+    "JUnit.Test1.insertAll.executor": "Run",
+    "JUnit.Test1.insertData.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/DAM/Proyectos VSC/Java/Hibernate/Incidencias",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ingeniero" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.Test1.consulta">
+    <configuration name="Test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hibernate-curso1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Test1" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test1.CrearBBDD" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hibernate-curso1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Test1" />
+      <option name="METHOD_NAME" value="CrearBBDD" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test1.consulta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hibernate-curso1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Test1" />
+      <option name="METHOD_NAME" value="consulta" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test1.consultas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hibernate-curso1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Test1" />
+      <option name="METHOD_NAME" value="consultas" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test1.insertAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hibernate-curso1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Test1" />
+      <option name="METHOD_NAME" value="insertAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.Test1.consulta" />
+        <item itemvalue="JUnit.Test1.consultas" />
+        <item itemvalue="JUnit.Test1" />
+        <item itemvalue="JUnit.Test1.CrearBBDD" />
+        <item itemvalue="JUnit.Test1.insertAll" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-temurin-21.0.1-f644763e9732-a3c558b9" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="57e632eb-89d5-478b-a007-22bfad290b41" name="Changes" comment="" />
+      <created>1708794366213</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708794366213</updated>
+      <workItem from="1708794367745" duration="7545000" />
+      <workItem from="1708860209352" duration="7484000" />
+      <workItem from="1708874824365" duration="4531000" />
+    </task>
+    <task id="LOCAL-00001" summary="Entidades vacias">
+      <option name="closed" value="true" />
+      <created>1708794612634</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708794612634</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Entidades terminadas">
+      <option name="closed" value="true" />
+      <created>1708868487434</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708868487434</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Inserccion de datos terminada">
+      <option name="closed" value="true" />
+      <created>1708868509196</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708868509196</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="Entidades vacias" />
+    <MESSAGE value="Insercion de datos y relaciones terminadas" />
+    <MESSAGE value="Entidades terminadas" />
+    <MESSAGE value="Inserccion de datos terminada" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inserccion de datos terminada" />
+  </component>
+</project>
